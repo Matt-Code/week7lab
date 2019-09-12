@@ -1,0 +1,39 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <img src="silicon_valley.png" height="150" width="400">
+    <h1> Add new Developer</h1>
+    <h1>
+        <a href="/listDeveloper"> List all Developers</a>
+        <a href="/newTask"> Add new Task</a>
+        <a href="/listTask"> List all Tasks</a>
+        <a href="/updateTask"> Update Task</a>
+        <a href="/deleteById"> Delete Task By ID</a>
+        <a href="/deleteAll"> Delete All Completed Task</a>
+    </h1>
+    <form action="/addNewDeveloper" method="POST">
+    
+        First Name <input type="text" name='fname' /> 
+        Last Name <input type="text" name="lname" />
+        <br/> 
+
+        Level <select name="level">
+            <option value="Beginner"> Beginner </option>
+            <option value="Expert"> Expert </option>
+        </select>
+        <br/>
+        
+        Address <br/>
+        State <input type="text" name="state" /> Suburb <input type="text" name="suburb" /> 
+        <br/>
+        Street  <input type="text" name="street" /> Unit <input type="text" name="unit" /> 
+        <br/>
+        <button>Submit</button>
+    </form>
+</body>
+
+</html>

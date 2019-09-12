@@ -1,0 +1,72 @@
+<html>
+
+<head>
+        <style>
+                table,th,td {
+                    border: 1px solid black;
+                }
+            </style>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1> List All Developers</h1>
+    <h1>
+        <a href="/newDeveloper"> Add new Developer</a>
+        <a href="/newTask"> Add new Task</a>
+        <a href="/listTask"> List all Tasks</a>
+        <a href="/updateTask"> Update Task</a>
+        <a href="/deleteById"> Delete Task By ID</a>
+        <a href="/deleteAll"> Delete All Completed Task</a>
+    </h1>
+
+    <table>
+        <tr>
+            <td rowspan='2'> ID</td>
+            <td colspan="2" >Name</td>
+            <td rowspan="2">Level</td>
+            <td colspan="4">Address</td>
+        </tr>
+
+        <tr> 
+            <td>First Name</td>
+            <td>Last Name</td>
+            <td>State</td>
+            <td>Suburb</td>
+            <td>Street</td>
+            <td>Unit</td>
+        </tr>
+    </tr>
+    <% for ( var i =0; i < developer.length;i++){ %>
+        <tr>
+            <td>
+                <%= developer[i]._id %>
+            </td>
+            <td>
+                <%= developer[i].name.firstName %>
+            </td>
+            <td>
+                <%= developer[i].name.lastName %>
+            </td>
+            <td>
+                <%= developer[i].level %>
+            </td>
+            <td>
+                <%= developer[i].address.state %>
+            </td>
+            <td>
+                <%= developer[i].address.suburb %>
+            </td>
+            <td>
+                <%= developer[i].address.street %>
+            </td>
+            <td>
+                <%= developer[i].address.unit %>
+            </td>
+        </tr>
+        <% }%>
+        <h3>
+
+</body>
+
+</html>

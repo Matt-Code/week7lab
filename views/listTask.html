@@ -1,0 +1,58 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        table,
+        th,
+        td {
+            border: 1px solid black;
+        }
+    </style>
+</head>
+
+<body>
+        <h1> List All Task</h1>
+        <h1>
+        <a href="/newDeveloper"> Add new Developer</a>
+        <a href="/listDeveloper"> List All Developers</a>
+        <a href="/newTask"> Add new Task</a>
+        <a href="/updateTask"> Update Task</a>
+        <a href="/deleteById"> Delete Task By ID</a>
+        <a href="/deleteAll"> Delete All Completed Task</a>
+        <table>
+            <tr>
+                <td>Task ID</td>
+                <td>Name</td>
+                <td>Assign To</td>
+                <td>Due Date</td>
+                <td>Status</td>
+                <td>Description</td>
+            </tr>
+            <% for ( var i =0; i < taskDb.length;i++){ %>
+                <tr>
+                    <td>
+                        <%= taskDb[i]._id %>
+                    </td>
+                    <td>
+                        <%= taskDb[i].name %>
+                    </td>
+                    <td>
+                        <%= taskDb[i].developer %>
+                    </td>
+                    <td>
+                        <% d= new Date (taskDb[i].dueDate )%>
+                        <%= d.getDate()+ " /" + (d.getMonth()+1) + " /" + d.getFullYear()   %>
+                    </td>
+                    <td>
+                        <%= taskDb[i].taskStatus %>
+                    </td>
+                    <td>
+                        <%= taskDb[i].taskDescription%>
+                    </td>
+                </tr>
+                <% }%>
+    </h3>
+</body>
+
+</html>
